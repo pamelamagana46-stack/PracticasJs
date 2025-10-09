@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Objetos</h1> 
+   <ul id="lista"></ul>
+   <script>
+       var obj = { id:1, nombre: "Coca-Cola", precio: 1.25, imagenUrl: "https://walmartsv.vtexassets.com/arquivos/ids/578740-1200-900?v=638659917365170000&width=1200&height=900&aspect=true"
+
+       };
+       var producto = [
+           { id:2, nombre: "Margarina Mirasol", precio: 1.75, imagenUrl: "https://d11h484hxd26eg.cloudfront.net/organizations/35/Margarina_Mirasol_Regular_400g__1__600.jpg"},
+           { id:3, nombre: "Cereal Choco-Krispy", precio: 2.50, imagenUrl: "https://images.kglobalservices.com/www.kelloggs.com.gt/es_gt/product/product_1025110/prod_img-1025238_frontvisualrenderchoco290g.jpg"},
+           { id:4, nombre: "Cubitos", precio: 0.65, imagenUrl: "https://www.nestleprofessional-latam.com/sites/default/files/styles/np_product_detail_2x/public/2023-12/CULINARIOS%2020-A.webp?itok=P1Jrn1DU"}
+       ];
+       producto.push(obj);
+
+       producto.forEach(x => {
+         var salida = `<li> 
+                        <b>Id:</b> ${x.id} </br>
+                        <b> Nombre:</b>${x.nombre} </br>
+                        <b> Precio:</b>${x.precio} </br>
+                        <img src="${x.imagenUrl}" height="150"/>
+
+                       </li>`;
+                        document.getElementById('lista').innerHTML += salida;             
+       })
+
+
+   </script>
+</body>
+</html>
